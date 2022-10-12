@@ -1,0 +1,19 @@
+name: 'Greeting docker'
+author: Yair
+description: 'Say hello with docker'
+
+inputs:
+  who-to-greet:
+    description: 'who to greet'
+    required: true
+    default: Yair
+
+outputs:
+  time:
+    description: 'Greeting time'
+
+runs:
+  using: "docker"
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
