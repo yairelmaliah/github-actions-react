@@ -76,7 +76,7 @@ jobs:
         name: create issue
         if: failure() && github.event_name == 'pull_request'
         with:
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.CUSTOM_TOKEN }}
             title: Title
             body: body
             assignees: "${{ github.event.pull_request.user.login }}"
