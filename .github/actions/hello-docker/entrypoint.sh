@@ -8,7 +8,7 @@ echo "::add-mask::$1"
 echo "Hello $1"
 TIME=$(date)
 
-echo "::set-output name=time::$TIME"
+echo "time=$TIME" >> $GITHUB_OUTPUT
 
 echo "::group::Some Extendable logs"
 echo "Some Stuff"
@@ -16,4 +16,4 @@ echo "Some Stuff"
 echo "Some Stuff"
 echo "::endgroup::"
 
-echo "::set-env name=HELLO::hello"
+echo "HELLO=hello" >> $GITHUB_ENV
