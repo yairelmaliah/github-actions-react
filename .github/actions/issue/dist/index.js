@@ -5436,8 +5436,8 @@ try {
   const response = octokit.rest.issues.create({
     ...github.context.repo,
     title: "New issue!",
-    body: "Hello Universe!",
-    assignees: assignees ? assignees.split("\n") : undefined
+    body: "Hello Universe!"
+    // assignees: assignees ? assignees.split("\n") : undefined
   });
 
   core.setOutput("issue", JSON.stringify(response.data));
