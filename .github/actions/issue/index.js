@@ -10,7 +10,7 @@ try {
   const octokit = github.getOctokit(token);
 
   const response = octokit.rest.issues.create({
-    ...context.repo,
+    ...github.context.repo,
     title: "New issue!",
     body: "Hello Universe!",
     assignees: assignees ? assignees.split("\n") : undefined
