@@ -9,7 +9,7 @@ try {
 
   const octokit = github.getOctokit(token);
 
-  const response = await octokit.rest.issues.create({
+  const response = octokit.rest.issues.create({
     ...context.repo,
     title: "New issue!",
     body: "Hello Universe!",
